@@ -4,6 +4,7 @@
   "description": "Compatibility layer for working with SIP (custom media handling for SIP.js)",
   "main": "index.js",
   "scripts": {
+    "gendocs": "gendocs > README.md",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,5 +21,13 @@
   "bugs": {
     "url": "https://github.com/rtc-io/rtc-sip/issues"
   },
-  "homepage": "https://github.com/rtc-io/rtc-sip"
+  "homepage": "https://github.com/rtc-io/rtc-sip",
+  "dependencies": {
+    "cog": "^1.0.0"
+  },
+  "devDependencies": {
+    "sip.js": "^0.6.3",
+    "rtc-capture": "^1.0.2",
+    "rtc-plugin-nicta-ios": "^1.5.1"
+  }
 }

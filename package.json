@@ -1,0 +1,24 @@
+{
+  "name": "rtc-sip",
+  "version": "1.0.0",
+  "description": "Compatibility layer for working with SIP (custom media handling for SIP.js)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rtc-io/rtc-sip.git"
+  },
+  "keywords": [
+    "rtc.io",
+    "webrtc",
+    "sip"
+  ],
+  "author": "Damon Oehlman <damon.oehlman@nicta.com.au>",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/rtc-io/rtc-sip/issues"
+  },
+  "homepage": "https://github.com/rtc-io/rtc-sip"
+}

@@ -14,7 +14,7 @@
   - Using a SIP endpoint to attach to a WebRTC call for the purposes of
     recording audio.
 
-  While other features will be implemented over time, these is not as high
+  While other features will be implemented over time, these are not as high
   a priority as other implementation tasks within the rtc.io suite.
 
   ## Example Usage

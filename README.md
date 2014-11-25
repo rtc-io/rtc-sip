@@ -8,7 +8,7 @@ the default WebRTC behaviour of SIP.js
 
 [![NPM](https://nodei.co/npm/rtc-sip.png)](https://nodei.co/npm/rtc-sip/)
 
-[![Build Status](https://img.shields.io/travis/rtc-io/rtc-sip.svg?branch=master)](https://travis-ci.org/rtc-io/rtc-sip) [![experimental](https://img.shields.io/badge/stability-experimental-red.svg)](https://github.com/dominictarr/stability#experimental) 
+[![experimental](https://img.shields.io/badge/stability-experimental-red.svg)](https://github.com/dominictarr/stability#experimental) 
 [![rtc.io google group](http://img.shields.io/badge/discuss-rtc.io-blue.svg)](https://groups.google.com/forum/#!forum/rtc-io)
 
 

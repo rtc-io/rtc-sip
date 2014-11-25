@@ -1,6 +1,7 @@
 var findPlugin = require('rtc-core/plugin');
 var detect = require('rtc-core/detect');
 var RTCPeerConnection = detect('RTCPeerConnection');
+var RTCSessionDescription = detect('RTCSessionDescription');
 
 var createIceServers = exports.createIceServers = function(session, opts) {
   var config = session.ua.configuration || {};
@@ -30,4 +31,18 @@ var createPeer = exports.createPeer = function(config, session, opts) {
   }
 
   return new RTCPeerConnection(pcConfig, constraints);
+};
+
+var createSessionDesc = exports.createSessionDesc = function(config, raw) {
+  var plugin = findPlugin((config || {}).plugins);
+
+  if (plugin && typeof plugin.createSessionDescription == 'function') {
+    return plugin.createSessionDescription(raw);
+  }
+
+  return new RTCSessionDescription(raw);
+};
+
+exports.hasOffer = function(pc, type) {
+  return pc.signalingState === 'have-' + (type || 'local') + '-offer';
 };

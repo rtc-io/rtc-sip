@@ -19,6 +19,20 @@
 
   ## Example Usage
 
-  To be completed.
+  Displayed below is an example of how you can use the `rtc-sip/media-handler-factor`
+  to integrate with some of the `rtc.io` packages:
 
+  <<< examples/getonsip.js
+
+  To get this example running, you will need to signup for a free
+  [getonsip](https://www.getonsip.com/) account and provide configuration
+  information in an `examples/config.json` file (something like what is shown
+  below):
+
+  ```json
+  {
+    "user": "username",
+    "password": "sippassword-check-your-profile"
+  }
+  ```
 **/

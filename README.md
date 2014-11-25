@@ -26,7 +26,48 @@ a priority as other implementation tasks within the rtc.io suite.
 
 ## Example Usage
 
-To be completed.
+Displayed below is an example of how you can use the `rtc-sip/media-handler-factor`
+to integrate with some of the `rtc.io` packages:
+
+```js
+var config = require('./config.json');
+var SIP = require('sip.js');
+var ua = new SIP.UA({
+  // initialise with the custom rtc.io media handler factory
+  // specify any rtc.io plugins that you wish to use with in the plugins option
+  mediaHandlerFactory: require('../media-handler-factory')({ plugins: [] }),
+
+  // initialise the uri, authorizationUser and password
+  uri: config.user + '@getonsip.com',
+  displayName: 'rtc-sip demo user',
+
+  authorizationUser: 'getonsip_' + config.user,
+  password: config.password
+});
+
+// invite someone :)
+ua.invite('damonoehlman@getonsip.com', {
+  media: {
+    constraints: {
+      audio: true,
+      video: true
+    }
+  }
+});
+
+```
+
+To get this example running, you will need to signup for a free
+[getonsip](https://www.getonsip.com/) account and provide configuration
+information in an `examples/config.json` file (something like what is shown
+below):
+
+```json
+{
+  "user": "username",
+  "password": "sippassword-check-your-profile"
+}
+```
 
 ## License(s)
 

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Compatibility layer for working with SIP (custom media handling for SIP.js)",
   "main": "index.js",
+  "stability": "experimental",
   "scripts": {
     "gendocs": "gendocs > README.md",
     "test": "echo \"Error: no test specified\" && exit 1"

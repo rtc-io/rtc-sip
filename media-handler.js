@@ -1,5 +1,6 @@
 var EventEmitter = require('eventemitter3');
 var inherits = require('inherits');
+var extend = require('cog/extend');
 var capture = require('rtc-capture');
 var utils = require('./utils');
 var taskqueue = require('rtc-taskqueue');
@@ -18,7 +19,7 @@ function MediaHandler(config, session, opts) {
 
   // create a peer connection
   this.pc = utils.createPeer(config, session, opts);
-  this.queue = taskqueue(this.pc, config);
+  this.queue = taskqueue(this.pc, this._buildTQOpts(config, session, opts));
   this.ice = ObservIce(this.pc);
 }
 
@@ -111,4 +112,17 @@ prot.getLocalStreams = function() {
 
 prot.getRemoteStreams = function() {
   return this.pc.getRemoteStreams();
+};
+
+prot._buildTQOpts = function(config, session, opts) {
+  var constraints = (session && session.RTCConstraints) || {};
+  var cfg = extend({}, config, constraints.mandatory);
+
+  (constraints.optional || []).forEach(function(item) {
+    Object.keys(item).forEach(function(key) {
+      cfg[key] = item[key];
+    });
+  });
+
+  return cfg;
 };

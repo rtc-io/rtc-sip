@@ -18,13 +18,11 @@ var createIceServers = exports.createIceServers = function(session, opts) {
 };
 
 var createPeer = exports.createPeer = function(config, session, opts) {
-  var constraints = (opts || {}).RTCConstraints;
+  var constraints = undefined; // (opts || {}).RTCConstraints;
   var plugin = findPlugin((config || {}).plugins);
   var pcConfig = {
     iceServers: createIceServers(session, opts)
   };
-
-  console.log(pcConfig);
 
   if (plugin && typeof plugin.createConnection == 'function') {
     return plugin.createConnection(pcConfig, constraints);

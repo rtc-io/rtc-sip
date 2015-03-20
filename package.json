@@ -1,6 +1,6 @@
 {
   "name": "rtc-sip",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Compatibility layer for working with SIP (custom media handling for SIP.js)",
   "main": "index.js",
   "stability": "experimental",

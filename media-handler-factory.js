@@ -1,4 +1,3 @@
-var attach = require('rtc-attach');
 var MediaHandler = require('./media-handler');
 
 module.exports = function(config) {

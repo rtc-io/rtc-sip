@@ -8,8 +8,8 @@ the default WebRTC behaviour of SIP.js
 
 [![NPM](https://nodei.co/npm/rtc-sip.png)](https://nodei.co/npm/rtc-sip/)
 
-[![experimental](https://img.shields.io/badge/stability-experimental-red.svg)](https://github.com/dominictarr/stability#experimental) 
-[![rtc.io google group](http://img.shields.io/badge/discuss-rtc.io-blue.svg)](https://groups.google.com/forum/#!forum/rtc-io)
+[![experimental](https://img.shields.io/badge/stability-experimental-red.svg)](https://github.com/dominictarr/stability#experimental) [![bitHound Score](https://www.bithound.io/github/rtc-io/rtc-sip/badges/score.svg)](https://www.bithound.io/github/rtc-io/rtc-sip) 
+[![Gitter chat](https://badges.gitter.im/rtc-io/discuss.png)](https://gitter.im/rtc-io/discuss)
 
 
 
@@ -30,7 +30,7 @@ Displayed below is an example of how you can use the `rtc-sip/media-handler-fact
 to integrate with some of the `rtc.io` packages:
 
 ```js
-var config = require('./config.json');
+var config = require('rtc-sip/config.json');
 var SIP = require('sip.js');
 var ua = new SIP.UA({
   // initialise with the custom rtc.io media handler factory
@@ -73,7 +73,7 @@ below):
 
 ### Apache 2.0
 
-Copyright 2014 National ICT Australia Limited (NICTA)
+Copyright 2015 National ICT Australia Limited (NICTA)
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.

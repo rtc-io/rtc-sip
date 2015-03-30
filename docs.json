@@ -2,7 +2,8 @@
   "badges": {
     "nodeico": true,
     "stability": true,
-    "group": "rtc.io"
+    "bithound": true,
+    "gitter": "rtc-io/discuss"
   },
 
   "license": {

@@ -2,6 +2,8 @@ var findPlugin = require('rtc-core/plugin');
 var detect = require('rtc-core/detect');
 var RTCPeerConnection = detect('RTCPeerConnection');
 var RTCSessionDescription = detect('RTCSessionDescription');
+var defaults = require('cog/defaults');
+var pluck = require('whisk/pluck');
 
 var createIceServers = exports.createIceServers = function(session, opts) {
   var config = session.ua.configuration || {};
@@ -18,7 +20,11 @@ var createIceServers = exports.createIceServers = function(session, opts) {
 };
 
 var createPeer = exports.createPeer = function(config, session, opts) {
-  var constraints = undefined; // (opts || {}).RTCConstraints;
+  var pluckConstraints = pluck('mandatory', 'optional');
+  var constraints = defaults(pluckConstraints((opts || {}).RTCConstraints), {
+    mandatory: {},
+    optional: []
+  });
   var plugin = findPlugin((config || {}).plugins);
   var pcConfig = {
     iceServers: createIceServers(session, opts)

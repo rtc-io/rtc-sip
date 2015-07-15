@@ -36,6 +36,6 @@
     "crel": "^2.1.5",
     "rtc-capture": "^1.0.2",
     "rtc-plugin-nicta-ios": "^1.5.1",
-    "sip.js": "^0.6.3"
+    "sip.js": "^0.7.0"
   }
 }

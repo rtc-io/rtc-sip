@@ -20,5 +20,11 @@ ua.invite('damonoehlman@getonsip.com', {
       audio: true,
       video: true
     }
+  },
+
+  RTCConstraints: {
+    optional: [
+      { googIPv6: false }
+    ]
   }
 });
